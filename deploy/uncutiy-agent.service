@@ -1,0 +1,19 @@
+[Unit]
+Description=Unicity Paid Service Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/uncutiy-agent
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/uncutiy-agent/.env
+ExecStart=/usr/bin/npm run start
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/uncutiy-agent/out.log
+StandardError=append:/var/log/uncutiy-agent/err.log
+
+[Install]
+WantedBy=multi-user.target
