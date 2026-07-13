@@ -227,6 +227,81 @@ h1 {
   margin-bottom: 0;
 }
 
+.section-copy {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.connect-card {
+  max-width: 820px;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 126, 25, 0.34);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 126, 25, 0.11), rgba(20, 22, 28, 0.92));
+}
+
+.connect-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #667080;
+  box-shadow: 0 0 0 5px rgba(102, 112, 128, 0.13);
+}
+
+.status-dot.is-live {
+  background: #43d17b;
+  box-shadow: 0 0 0 5px rgba(67, 209, 123, 0.13);
+}
+
+.wallet-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.wallet-details div {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.wallet-details dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.wallet-details dd {
+  margin: 0.5rem 0 0;
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.connect-note {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .steps,
 .service-grid,
 .code-grid {
@@ -302,6 +377,7 @@ h1 {
   .steps,
   .service-grid,
   .code-grid,
+  .wallet-details,
   .facts {
     grid-template-columns: 1fr;
   }

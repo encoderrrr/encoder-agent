@@ -35,7 +35,7 @@
             <a class="button primary" href="https://github.com/encoderrrr/encoder-agent" target="_blank" rel="noreferrer">
               View Source
             </a>
-            <a class="button secondary" href="#how-it-works">How It Works</a>
+            <a class="button secondary" href="#connect">Connect Wallet</a>
           </div>
           <dl class="facts">
             <div>
@@ -86,6 +86,35 @@
             <h3>Get the result</h3>
             <p>The final result is delivered back over direct messages and the job status moves to completed.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section connect-section" id="connect">
+        <div class="section-heading">
+          <p class="eyebrow">Sphere Connect</p>
+          <h2>Verify the agent from your wallet.</h2>
+          <p class="section-copy">
+            Connect your Sphere wallet to verify identity and testnet compatibility. This demo requests
+            identity read access only and never asks for a transfer.
+          </p>
+        </div>
+        <div class="connect-card">
+          <div class="connect-status-row">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="connect-status">Not connected</span>
+          </div>
+          <dl class="wallet-details">
+            <div><dt>Wallet identity</dt><dd id="wallet-identity">Connect to view</dd></div>
+            <div><dt>Network</dt><dd id="wallet-network">testnet2</dd></div>
+            <div><dt>Permissions</dt><dd>identity:read, events:subscribe</dd></div>
+          </dl>
+          <div class="cta-row">
+            <button class="button primary" id="connect-wallet" type="button">Connect Sphere Wallet</button>
+            <button class="button secondary" id="disconnect-wallet" type="button" disabled>Disconnect</button>
+          </div>
+          <p class="connect-note" id="connect-note">
+            In-app iframe and browser-extension connections are supported. Standalone mode opens the Sphere wallet.
+          </p>
         </div>
       </section>
 
@@ -145,5 +174,6 @@
       <p>Encoder Agent runs on Unicity testnet and is currently reachable at <strong>@encoderagent</strong>.</p>
       <a href="https://github.com/encoderrrr/encoder-agent" target="_blank" rel="noreferrer">Open the repository</a>
     </footer>
+    <script type="module" src="./app.js"></script>
   </body>
   </html>
